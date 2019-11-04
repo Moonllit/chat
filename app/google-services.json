@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "211900402484",
+    "firebase_url": "https://kotlinchat-9e0a6.firebaseio.com",
+    "project_id": "kotlinchat-9e0a6",
+    "storage_bucket": "kotlinchat-9e0a6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:211900402484:android:b7a2e78878c5d776d5f361",
+        "android_client_info": {
+          "package_name": "com.mirallis.chat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "211900402484-74opn64ouocgo5o8vm16kpuqarcrutdn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCJKz8dY1QJahtp3rhlkA2Fe8icpfPaQJI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "211900402484-74opn64ouocgo5o8vm16kpuqarcrutdn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
