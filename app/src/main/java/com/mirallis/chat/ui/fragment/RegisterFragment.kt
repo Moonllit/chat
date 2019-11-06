@@ -1,6 +1,7 @@
 package com.mirallis.chat.ui.fragment
 
+import com.mirallis.chat.R
+
 class RegisterFragment : BaseFragment() {
-    override val layoutId: Int
-        get() = TODO("not implemented") //To change initializer of created properties use File | Settings | File Templates.
+    override val layoutId = R.layout.fragment_register
 }
