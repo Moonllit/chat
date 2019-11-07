@@ -48,11 +48,10 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
-    //androidx
+    //android support
     implementation "androidx.appcompat:appcompat:$appCompatVersion"
-    implementation "androidx.core:core-ktx:$appCompatVersion"
     implementation "androidx.constraintlayout:constraintlayout:$constraintLayoutVersion"
-
+    implementation "com.google.android.material:material:$materialVersion"
 
     //kotlin coroutines
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$kotlinCoroutinesVersion"
@@ -89,11 +88,7 @@ dependencies {
 
     //form edit text
     implementation "com.andreabaccega:android-form-edittext:$formEditTextVersion"
-
-    //material
-    implementation "com.google.android.material:material:$materialVersion"
-
-
+    
     //test
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.2.0'
