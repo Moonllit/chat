@@ -1,7 +1,7 @@
 package com.mirallis.chat.domain.interactor
 
 import com.mirallis.chat.domain.type.Either
-import com.mirallis.chat.domain.type.exception.Failure
+import com.mirallis.chat.domain.type.Failure
 import kotlinx.coroutines.*
 import kotlin.coroutines.CoroutineContext
 

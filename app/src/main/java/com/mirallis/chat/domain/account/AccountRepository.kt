@@ -2,7 +2,7 @@ package com.mirallis.chat.domain.account
 
 import com.mirallis.chat.domain.type.None
 import com.mirallis.chat.domain.type.Either
-import com.mirallis.chat.domain.type.exception.Failure
+import com.mirallis.chat.domain.type.Failure
 
 interface AccountRepository {
     fun login(email: String, password: String): Either<Failure, AccountEntity>

@@ -2,7 +2,7 @@ package com.mirallis.chat.domain.account
 
 import com.mirallis.chat.domain.type.None
 import com.mirallis.chat.domain.type.Either
-import com.mirallis.chat.domain.type.exception.Failure
+import com.mirallis.chat.domain.type.Failure
 import com.mirallis.chat.domain.interactor.UseCase
 import javax.inject.Inject
 
