@@ -1,7 +1,7 @@
 package com.mirallis.chat.remote.core
 
 import com.mirallis.chat.domain.type.Either
-import com.mirallis.chat.domain.type.exception.Failure
+import com.mirallis.chat.domain.type.Failure
 import retrofit2.Call
 import retrofit2.Response
 import javax.inject.Inject
@@ -37,6 +37,8 @@ fun <T : BaseResponse> Response<T>.isSucceed(): Boolean {
 fun <T : BaseResponse> Response<T>.parseError(): Failure {
     return when ((body() as BaseResponse).message) {
         "email already exists" -> Failure.EmailAlreadyExistError
+        "error in email or password" -> Failure.AuthError
+        "Token is invalid" -> Failure.TokenError
         else -> Failure.ServerError
     }
 }
