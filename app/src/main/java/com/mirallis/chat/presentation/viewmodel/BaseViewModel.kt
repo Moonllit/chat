@@ -3,7 +3,7 @@ package com.mirallis.chat.presentation.viewmodel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.mirallis.chat.domain.type.HandleOnce
-import com.mirallis.chat.domain.type.exception.Failure
+import com.mirallis.chat.domain.type.Failure
 
 abstract class BaseViewModel : ViewModel() {
 
