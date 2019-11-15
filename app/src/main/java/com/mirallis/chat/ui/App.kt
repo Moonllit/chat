@@ -6,6 +6,7 @@ import com.mirallis.chat.presentation.injection.CacheModule
 import com.mirallis.chat.presentation.injection.RemoteModule
 import com.mirallis.chat.presentation.injection.ViewModelModule
 import com.mirallis.chat.ui.activity.RegisterActivity
+import com.mirallis.chat.ui.activity.RouteActivity
 import com.mirallis.chat.ui.fragment.RegisterFragment
 import com.mirallis.chat.ui.service.FirebaseService
 import dagger.Component
@@ -35,6 +36,7 @@ interface AppComponent {
 
     //activities
     fun inject(activity: RegisterActivity)
+    fun inject(activity: RouteActivity)
 
     //fragments
     fun inject(fragment: RegisterFragment)

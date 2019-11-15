@@ -9,9 +9,9 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
 import com.mirallis.chat.R
-import com.mirallis.chat.domain.type.exception.Failure
-import com.mirallis.chat.ui.activity.BaseActivity
-import com.mirallis.chat.ui.activity.base
+import com.mirallis.chat.domain.type.Failure
+import com.mirallis.chat.ui.core.BaseActivity
+import com.mirallis.chat.ui.core.base
 import javax.inject.Inject
 
 abstract class BaseFragment : Fragment() {

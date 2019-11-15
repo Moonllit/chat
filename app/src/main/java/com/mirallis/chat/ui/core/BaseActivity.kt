@@ -1,4 +1,4 @@
-package com.mirallis.chat.ui.activity
+package com.mirallis.chat.ui.core
 
 import android.app.Activity
 import android.content.Context
@@ -13,7 +13,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
 import com.mirallis.chat.R
-import com.mirallis.chat.domain.type.exception.Failure
+import com.mirallis.chat.domain.type.Failure
 import com.mirallis.chat.ui.fragment.BaseFragment
 import kotlinx.android.synthetic.main.toolbar.*
 import javax.inject.Inject
