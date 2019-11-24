@@ -5,10 +5,11 @@ import com.mirallis.chat.presentation.injection.AppModule
 import com.mirallis.chat.presentation.injection.CacheModule
 import com.mirallis.chat.presentation.injection.RemoteModule
 import com.mirallis.chat.presentation.injection.ViewModelModule
-import com.mirallis.chat.ui.activity.RegisterActivity
-import com.mirallis.chat.ui.activity.RouteActivity
+import com.mirallis.chat.ui.register.RegisterActivity
+import com.mirallis.chat.ui.core.navigation.RouteActivity
+import com.mirallis.chat.ui.firebase.FirebaseService
 import com.mirallis.chat.ui.fragment.RegisterFragment
-import com.mirallis.chat.ui.service.FirebaseService
+import com.mirallis.chat.ui.home.HomeActivity
 import dagger.Component
 import javax.inject.Singleton
 
@@ -37,6 +38,7 @@ interface AppComponent {
     //activities
     fun inject(activity: RegisterActivity)
     fun inject(activity: RouteActivity)
+    fun inject(activity: HomeActivity)
 
     //fragments
     fun inject(fragment: RegisterFragment)

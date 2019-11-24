@@ -6,6 +6,7 @@ import com.mirallis.chat.R
 import com.mirallis.chat.domain.type.None
 import com.mirallis.chat.presentation.viewmodel.AccountViewModel
 import com.mirallis.chat.ui.App
+import com.mirallis.chat.ui.core.BaseFragment
 import com.mirallis.chat.ui.core.ext.onFailure
 import com.mirallis.chat.ui.core.ext.onSuccess
 import kotlinx.android.synthetic.main.fragment_register.*

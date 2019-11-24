@@ -4,9 +4,9 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import com.mirallis.chat.presentation.Authenticator
-import com.mirallis.chat.ui.activity.HomeActivity
-import com.mirallis.chat.ui.activity.LoginActivity
-import com.mirallis.chat.ui.activity.RegisterActivity
+import com.mirallis.chat.ui.home.HomeActivity
+import com.mirallis.chat.ui.login.LoginActivity
+import com.mirallis.chat.ui.register.RegisterActivity
 import javax.inject.Inject
 import javax.inject.Singleton
 

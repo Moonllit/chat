@@ -14,7 +14,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
 import com.mirallis.chat.R
 import com.mirallis.chat.domain.type.Failure
-import com.mirallis.chat.ui.fragment.BaseFragment
+import com.mirallis.chat.ui.core.navigation.Navigator
 import kotlinx.android.synthetic.main.toolbar.*
 import javax.inject.Inject
 
@@ -25,9 +25,14 @@ abstract class BaseActivity : AppCompatActivity() {
     @Inject
     lateinit var viewModelFactory: ViewModelProvider.Factory
 
+    @Inject
+    lateinit var navigator: Navigator
+
+    open val contentId = R.layout.activity_layout
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_layout)
+        setContentView(contentId)
 
         setSupportActionBar(toolbar)
         addFragment(savedInstanceState)
@@ -35,7 +40,7 @@ abstract class BaseActivity : AppCompatActivity() {
 
     override fun onBackPressed() {
         (supportFragmentManager.findFragmentById(
-                R.id.fragmentContainer
+            R.id.fragmentContainer
         ) as BaseFragment).onBackPressed()
         super.onBackPressed()
     }
@@ -69,6 +74,8 @@ abstract class BaseActivity : AppCompatActivity() {
             is Failure.NetworkConnectionError -> showMessage(getString(R.string.error_network))
             is Failure.ServerError -> showMessage(getString(R.string.error_server))
             is Failure.EmailAlreadyExistError -> showMessage(getString(R.string.error_email_already_exist))
+            is Failure.AuthError -> showMessage(getString(R.string.error_auth))
+            is Failure.TokenError -> navigator.showLogin(this)
         }
     }
 
@@ -84,7 +91,7 @@ abstract class BaseActivity : AppCompatActivity() {
 }
 
 inline fun FragmentManager.inTransaction(func: FragmentTransaction.() -> FragmentTransaction) =
-        beginTransaction().func().commit()
+    beginTransaction().func().commit()
 
 inline fun Activity?.base(block: BaseActivity.() -> Unit) {
     (this as? BaseActivity)?.let(block)

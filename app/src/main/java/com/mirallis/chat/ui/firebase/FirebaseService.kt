@@ -1,4 +1,4 @@
-package com.mirallis.chat.ui.service
+package com.mirallis.chat.ui.firebase
 
 import android.util.Log
 import com.google.firebase.messaging.FirebaseMessagingService
