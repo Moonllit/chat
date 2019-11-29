@@ -1,8 +1,9 @@
-package com.mirallis.chat.ui.fragment
+package com.mirallis.chat.ui.register
 
 import android.os.Bundle
 import android.view.View
 import com.mirallis.chat.R
+import com.mirallis.chat.domain.account.AccountEntity
 import com.mirallis.chat.domain.type.None
 import com.mirallis.chat.presentation.viewmodel.AccountViewModel
 import com.mirallis.chat.ui.App
@@ -23,6 +24,7 @@ class RegisterFragment : BaseFragment() {
 
         accountViewModel = viewModel {
             onSuccess(registerData, ::handleRegister)
+            onSuccess(accountData, ::handleLogin)
             onFailure(failureData, ::handleFailure)
         }
     }
@@ -32,6 +34,10 @@ class RegisterFragment : BaseFragment() {
 
         btnNewMembership.setOnClickListener {
             register()
+        }
+
+        btnAlreadyHaveAccount.setOnClickListener {
+            activity?.finish()
         }
     }
 
@@ -61,15 +67,22 @@ class RegisterFragment : BaseFragment() {
             showProgress()
 
             accountViewModel.register(
-                    etEmail.text.toString(),
-                    etUsername.text.toString(),
-                    etPassword.text.toString()
+                etEmail.text.toString(),
+                etUsername.text.toString(),
+                etPassword.text.toString()
             )
         }
     }
 
-    private fun handleRegister(none: None? = None()) {
+    private fun handleLogin(account: AccountEntity?) {
         hideProgress()
-        showMessage("Аккаунт создан")
+        activity?.let {
+            navigator.showHome(it)
+            it.finish()
+        }
+    }
+
+    private fun handleRegister(none: None? = None()) {
+        accountViewModel.login(etEmail.text.toString(), etPassword.text.toString())
     }
 }
